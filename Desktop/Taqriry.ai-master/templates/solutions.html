@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}">
+</head>
+<body>
+    <section class="solutions-section">
+        <a href="{{ url_for('ForBusniness') }}" class="solution-item solution-business">
+            <img src="{{ url_for('static', filename='images/business-icon.png') }}" alt="Business Icon" class="solution-icon">
+            <div class="solution-text">
+                <h4>{{ 'For Business' if language == 'en' else 'للأعمال' }}</h4>
+                <p>{{ 'Making meetings better with automatic notes' if language == 'en' else 'حسن الاجتماعات مع الملاحظات التلقائية' }}</p>
+            </div>
+        </a>
+
+        <a href="{{ url_for('forsales') }}" class="solution-item solution-sales">
+            <img src="{{ url_for('static', filename='images/icon-business.png') }}" alt="Sales Icon" class="solution-icon">
+            <div class="solution-text">
+                <h4>{{ 'For Sales' if language == 'en' else 'للمبيعات' }}</h4>
+                <p>{{ 'Making meetings better with automatic notes' if language == 'en' else 'حسن الاجتماعات مع الملاحظات التلقائية' }}</p>
+            </div>
+        </a>
+
+        <a href="{{ url_for('education') }}" class="solution-item solution-education">
+            <img src="{{ url_for('static', filename='images/icon-education.png') }}" alt="Education Icon" class="solution-icon">
+            <div class="solution-text">
+                <h4>{{ 'For Education' if language == 'en' else 'للتعليم' }}</h4>
+                <p>{{ 'Help students and faculties succeed' if language == 'en' else 'ساعد الطلاب وأعضاء هيئة التدريس على النجاح' }}</p>
+            </div>
+        </a>
+
+      
+        
+
+        <a href="{{ url_for('media') }}" class="solution-item solution-media">
+            <img src="{{ url_for('static', filename='images/icon-media.png') }}" alt="Media Icon" class="solution-icon">
+            <div class="solution-text">
+                <h4>{{ 'For Media' if language == 'en' else 'للإعلام' }}</h4>
+                <p>{{ 'Create compelling stories using detailed notes' if language == 'en' else 'إنشاء قصص جذابة باستخدام ملاحظات مفصلة' }}</p>
+            </div>
+        </a>
+    </section>
+</body>
+</html>

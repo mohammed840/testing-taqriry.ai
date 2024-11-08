@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taqriry.ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Taqriry.png') }}" alt="Taqriry Logo">
+                <span data-en="Taqriry.ai" data-ar="Taqriry.ai">Taqriry.ai</span>
+            </div>
+            <nav class="main-nav">
+                <a href="{{ url_for('solutions') }}" id="solutions-link" data-en="Solutions" data-ar="الحلول">
+                    Solutions <span class="dropdown-arrow">▼</span>
+                </a>
+                
+                <a href="{{ url_for('pricing') }}" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+                <a href="{{ url_for('apps') }}" data-en="Apps & Integrations" data-ar="التطبيقات والتكامل">Apps & Integrations</a>
+                <a href="#" id="resources-link" data-en="Resources" data-ar="الموارد">Resources <span class="dropdown-arrow">▼</span></a>
+            </nav>
+            
+            <div class="language-toggle">
+                <button onclick="setLanguage('en')">English</button>
+                <button onclick="setLanguage('ar')">العربية</button>
+            </div>
+        </div>
+    </header>
+    
+ 
+
+            
+
+          <!-- Solutions Overlay -->
+<div id="solutions-overlay" class="overlay">
+    <div class="overlay-content">
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/business-icon.png') }}" alt="Business Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="For Business" data-ar="للأعمال">For Business <span>›</span></h4>
+                <p data-en="Make meetings better with automatic notes" data-ar="حسن الاجتماعات مع الملاحظات التلقائية">
+                    Make meetings better with automatic notes
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/icon-sales.png') }}" alt="Sales Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="For Sales" data-ar="للمبيعات">For Sales <span>›</span></h4>
+                <p data-en="Close deals & onboard new customers faster" data-ar="أغلق الصفقات واربح عملاء جدد بسرعة">
+                    Close deals & onboard new customers faster
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/icon-education.png') }}" alt="Education Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="For Education" data-ar="للتعليم">For Education <span>›</span></h4>
+                <p data-en="Help students and faculty succeed" data-ar="ساعد الطلاب وأعضاء هيئة التدريس على النجاح">
+                    Help students and faculty succeed
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/icon-media.png') }}" alt="Media Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="For Media" data-ar="للإعلام">For Media <span>›</span></h4>
+                <p data-en="Create compelling stories using detailed notes" data-ar="إنشاء قصص جذابة باستخدام ملاحظات مفصلة">
+                    Create compelling stories using detailed notes
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Resources Overlay -->
+<div id="resources-overlay" class="overlay">
+    <div class="overlay-content">
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/blog-icon.png') }}" alt="Blog Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="Blog" data-ar="المدونة">Blog <span>›</span></h4>
+                <p data-en="See what we've been up to and thinking about" data-ar="شاهد ما قمنا به وأفكارنا">
+                    See what we've been up to and thinking about
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/icon-media.png') }}" alt="Press Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="Press" data-ar="الصحافة">Press <span>›</span></h4>
+                <p data-en="The latest product and company news" data-ar="آخر الأخبار عن المنتج والشركة">
+                    The latest product and company news
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/resources-icon.png') }}" alt="Resources Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="Resources" data-ar="الموارد">Resources <span>›</span></h4>
+                <p data-en="Explore our content library" data-ar="استكشاف مكتبة المحتوى لدينا">
+                    Explore our content library
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/careers-icon.png') }}" alt="Careers Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="Careers" data-ar="الوظائف">Careers <span>›</span></h4>
+                <p data-en="Come join our team" data-ar="انضم إلى فريقنا">
+                    Come join our team
+                </p>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="{{ url_for('static', filename='images/help-icon.png') }}" alt="Help Icon" class="overlay-icon">
+            <div class="overlay-text">
+                <h4 data-en="Help & Support" data-ar="المساعدة والدعم">Help & Support <span>›</span></h4>
+                <p data-en="Need some help using Taqriry? Get the answers" data-ar="تحتاج مساعدة في استخدام تقريري؟ احصل على الإجابات">
+                    Need some help using Taqriry? Get the answers
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="auth-buttons">
+    <a href="{{ url_for('schedule_demo') }}" class="schedule-demo" data-en="Schedule a Demo" data-ar="جدولة عرض توضيحي">Schedule a Demo</a>
+    <a href="#" class="login" data-en="coming soon" data-ar="قريباً">coming soon</a>
+    <a href="/comingsoon" class="start-free" data-en="notify me" data-ar="أعلمني">notify me</a>
+
+</div>
+</div>
+</header>
+
+<main>
+    <!-- New Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <img src="{{ url_for('static', filename='images/robot pic.png') }}" alt="Taqrir.ai Sales Insights" class="banner-image">
+            <div class="banner-text">
+                <h2 data-en="Taqriry.ai The AI Tool for Sales and Meetings" data-ar=" أفضل أداة ذكاء اصطناعي لاجتماعات و للمبيعات  ">Taqriry.ai for Sales The AI Tool for Sales Meetings <span class="highlight" data-en="The AI Tool for Sales Meetings" data-ar="الأداة الذكية لاجتماعات ">The AI Tool for Sales Meetings</span></h2>
+
+                <a href="/comingsoon" class="learn-more" data-en="Learn more" data-ar="اعرف المزيد">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box">
+        <h1 data-en="The AI Meeting Assistant ✨" data-ar="مساعد الاجتماعات الذكي ✨">The AI Meeting Assistant ✨</h1>
+        <p data-en="Never take meeting notes again. Get transcripts, automated summaries, action items, and chat with Taqrir to get answers from your meetings."
+           data-ar="لا داعي لأخذ ملاحظات الاجتماع مجددًا. احصل على محاضر، ملخصات تلقائية، بنود العمل، وتحدث مع تقريري للحصول على إجابات من اجتماعاتك.">
+            Never take meeting notes again. Get transcripts, automated summaries, action items, and chat with Taqrir to get answers from your meetings.
+        </p>
+        <a href="#" class="start-free-btn" data-en="Start for Free" data-ar="ابدأ مجاناً">Start for Free</a>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3 data-en="AI Meeting Assistant" data-ar="مساعد الاجتماعات الذكي">AI Meeting Assistant</h3>
+                <p data-en="Get automated meeting notes and summaries with action items using Taqrir."
+                   data-ar="احصل على ملاحظات اجتماعية تلقائية وملخصات مع بنود العمل باستخدام تقريري.">
+                    Get automated meeting notes and summaries with action items using Taqrir.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="new-badge" data-en="NEW" data-ar="جديد">NEW</span>
+                <h3 data-en="Taqrir AI Chat" data-ar="دردشة تقريري الذكية">Taqrir AI Chat</h3>
+                <p data-en="Get answers and generate content like emails and status updates, using the power of Taqrir AI Chat across all your meetings."
+                   data-ar="احصل على إجابات وأنشئ محتوى مثل الرسائل الإلكترونية وتحديثات الحالة، باستخدام قوة الدردشة الذكية من تقريري عبر جميع اجتماعاتك.">
+                    Get answers and generate content like emails and status updates, using the power of Taqrir AI Chat across all your meetings.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="new-badge" data-en="NEW" data-ar="جديد">NEW</span>
+                <h3 data-en="AI Channels" data-ar="قنوات الذكاء الاصطناعي">AI Channels</h3>
+                <p data-en="Combine live conversations with async updates. Chat with Taqrir and teammates to get answers and drive projects forward."
+                   data-ar="ادمج المحادثات الحية مع التحديثات غير المتزامنة. تحدث مع تقريري وزملائك للحصول على إجابات ودفع المشاريع إلى الأمام.">
+                    Combine live conversations with async updates. Chat with Taqrir and teammates to get answers and drive projects forward.
+                </p>
+            </div>
+        </div>
+
+        <!-- Embedded video or placeholder image for video -->
+        <div class="video-container">
+            <video autoplay loop muted class="curved-video">
+                <source src="static/videos/meetiingai.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="brands">
+            <!-- Placeholder for brand logos if needed -->
+        </div>
+    </section>
+</main>
+
+
+<section class="feature-section">
+    <div class="feature-box">
+        <img src="{{ url_for('static', filename='images/feature1.png') }}" alt="Feature 1" class="feature-image">
+        <div class="feature-description">
+            <h3><a href="#" data-en="Never miss a detail with AI Meeting notes" data-ar="لا تفوت أي تفاصيل مع ملاحظات الاجتماعات الذكية">Never miss a detail with AI Meeting notes</a></h3>
+            <p data-en="Taqriry auto-joins Zoom, Google Meet, and Microsoft Teams meetings to automatically take notes, allowing everyone to participate freely. Follow along live on the web or on the iOS or Android app." 
+               data-ar="ينضم تقريري تلقائيًا إلى اجتماعات زووم، جوجل ميت، ومايكروسوفت تيمز لتسجيل الملاحظات تلقائيًا، مما يسمح للجميع بالمشاركة بحرية. تابع مباشرة على الويب أو عبر تطبيق iOS أو Android.">
+                Taqriry auto-joins Zoom, Google Meet, and Microsoft Teams meetings to automatically take notes, allowing everyone to participate freely. Follow along live on the web or on the iOS or Android app.
+            </p>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <img src="{{ url_for('static', filename='images/feature2.png') }}" alt="Feature 2" class="feature-image">
+        <div class="feature-description">
+            <h3><a href="#" data-en="Condense a 1-hour meeting into" data-ar="اختصر اجتماع ساعة في"><span class="highlight" data-en="30 seconds" data-ar="30 ثانية">30 seconds</span></a></h3>
+            <p data-en="Attended a 1-hour team meeting, but can't remember a thing? Taqriry generates a 30-second summary, keeping everyone informed." 
+               data-ar="حضرت اجتماع فريق لمدة ساعة، ولكن لا تتذكر شيئاً؟ يقوم تقريري بتوليد ملخص مدته 30 ثانية، ليبقي الجميع على اطلاع.">
+                Attended a 1-hour team meeting, but can't remember a thing? Taqriry generates a 30-second summary, keeping everyone informed.
+            </p>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <img src="{{ url_for('static', filename='images/feature3.png') }}" alt="Feature 3" class="feature-image">
+        <div class="feature-description">
+            <h3><a href="#" data-en="Skip the tedious task of composing action item emails" data-ar="تجاوز مهمة إرسال رسائل المهام المملة">Skip the tedious task of composing action item emails</a></h3>
+            <p data-en="Taqriry automatically captures and assigns action items from the meeting, with complete context of the discussion, keeping everyone aligned on next steps." 
+               data-ar="يقوم تقريري بتحديد وتعيين بنود العمل تلقائيًا من الاجتماع مع السياق الكامل للنقاش، للحفاظ على توافق الجميع حول الخطوات التالية.">
+                Taqriry automatically captures and assigns action items from the meeting, with complete context of the discussion, keeping everyone aligned on next steps.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="feature-grid">
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-sales.png') }}" alt="Sales Teams" class="grid-icon">
+        <h3 data-en="Sales Teams" data-ar="فرق المبيعات">Sales Teams</h3>
+        <p data-en="Taqriry for Sales extracts Sales Insights, writes follow-up emails, and pushes call notes to Salesforce and Hubspot." 
+           data-ar="يستخرج تقريري للمبيعات رؤى المبيعات، يكتب رسائل المتابعة، ويرسل ملاحظات المكالمات إلى Salesforce وHubspot.">
+            Taqriry for Sales extracts Sales Insights, writes follow-up emails, and pushes call notes to Salesforce and Hubspot.
+        </p>
+    </div>
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-business.png') }}" alt="Business" class="grid-icon">
+        <h3 data-en="Business" data-ar="الأعمال">Business</h3>
+        <p data-en="Taqriry empowers everyone to engage and be more productive in meetings with real-time automated notes, summaries, and action items." 
+           data-ar="يمكن تقريري الجميع من المشاركة ويزيد من الإنتاجية في الاجتماعات مع ملاحظات وتلخيصات وبنود عمل تلقائية في الوقت الفعلي.">
+            Taqriry empowers everyone to engage and be more productive in meetings with real-time automated notes, summaries, and action items.
+        </p>
+    </div>
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-marketing.png') }}" alt="Marketing Teams" class="grid-icon">
+        <h3 data-en="Marketing Teams" data-ar="فرق التسويق">Marketing Teams</h3>
+        <p data-en="Taqriry automatically assigns action items from all your cross-functional team meetings, helping everyone stay aligned." 
+           data-ar="يقوم تقريري بتعيين بنود العمل تلقائيًا من جميع اجتماعات الفريق المتعدد الوظائف، مما يساعد الجميع على البقاء متوافقين.">
+            Taqriry automatically assigns action items from all your cross-functional team meetings, helping everyone stay aligned.
+        </p>
+    </div>
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-recruiting.png') }}" alt="Recruiting Teams" class="grid-icon">
+        <h3 data-en="Recruiting Teams" data-ar="فرق التوظيف">Recruiting Teams</h3>
+        <p data-en="Taqriry transcribes and summarizes interviews, reducing the time and effort required to evaluate candidates." 
+           data-ar="يقوم تقريري بتفريغ وتلخيص المقابلات، مما يقلل من الوقت والجهد المطلوبين لتقييم المرشحين.">
+            Taqriry transcribes and summarizes interviews, reducing the time and effort required to evaluate candidates.
+        </p>
+    </div>
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-media.png') }}" alt="Media" class="grid-icon">
+        <h3 data-en="Media" data-ar="الإعلام">Media</h3>
+        <p data-en="Taqriry helps you tell the stories that matter through automated, real-time transcription." 
+           data-ar="يساعدك تقريري في سرد القصص الهامة من خلال تفريغ تلقائي في الوقت الفعلي.">
+            Taqriry helps you tell the stories that matter through automated, real-time transcription.
+        </p>
+    </div>
+    <div class="grid-card">
+        <img src="{{ url_for('static', filename='images/icon-education.png') }}" alt="Education" class="grid-icon">
+        <h3 data-en="Education" data-ar="التعليم">Education</h3>
+        <p data-en="Taqriry provides faculty and students with real-time captions and notes for in-person and virtual lectures, classes, or meetings." 
+           data-ar="يوفر تقريري لأعضاء هيئة التدريس والطلاب تسميات توضيحية وملاحظات في الوقت الفعلي للمحاضرات أو الدروس أو الاجتماعات الشخصية والافتراضية.">
+            Taqriry provides faculty and students with real-time captions and notes for in-person and virtual lectures, classes, or meetings.
+        </p>
+    </div>
+</section>
+
+<section class="blue-box-section">
+    <h2 data-en="Automate workflows to" data-ar="أتمت سير العمل من أجل">Automate workflows to <span class="highlight" data-en="increase productivity" data-ar="زيادة الإنتاجية">increase productivity</span> for your team</h2>
+    <div class="blue-box">
+        <img src="{{ url_for('static', filename='images/sales-call-screenshot.png') }}" alt="Sales Call Screenshot" class="screenshot">
+    </div>
+</section>
+
+<section class="three-feature-cards">
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/icon-action-items.png') }}" alt="Assigns action items" class="feature-icon">
+        <h3 data-en="Assigns action items" data-ar="تعيين بنود العمل">Assigns action items</h3>
+        <p data-en="Taqriry automatically identifies and assigns action items to teammates, saving the meeting leader time while keeping the team aligned on next steps." 
+           data-ar="يقوم تقريري بتحديد وتعيين بنود العمل تلقائيًا للزملاء، مما يوفر وقت قائد الاجتماع ويحافظ على توافق الفريق بشأن الخطوات التالية.">
+            Taqriry automatically identifies and assigns action items to teammates, saving the meeting leader time while keeping the team aligned on next steps.
+        </p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/icon-slack.png') }}" alt="Posts to Slack" class="feature-icon">
+        <h3 data-en="Posts to Slack" data-ar="النشر على Slack">Posts to Slack</h3>
+        <p data-en="Taqriry automatically shares meeting notes and summaries with teammates via email and in the team’s Slack Channel." 
+           data-ar="يقوم تقريري بمشاركة ملاحظات الاجتماع وملخصاته مع الزملاء عبر البريد الإلكتروني وفي قناة Slack الخاصة بالفريق.">
+            Taqriry automatically shares meeting notes and summaries with teammates via email and in the team’s Slack Channel.
+        </p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/icon-workflow.png') }}" alt="Integrates with your workflow" class="feature-icon">
+        <h3 data-en="Integrates with your workflow" data-ar="يتكامل مع سير العمل الخاص بك">Integrates with your workflow</h3>
+        <p data-en="Taqriry integrates with tools your team uses every day, including Salesforce, HubSpot, Egnyte, Amazon S3, Snowflake, and Microsoft SharePoint." 
+           data-ar="يتكامل تقريري مع الأدوات التي يستخدمها فريقك يوميًا، بما في ذلك Salesforce وHubSpot وEgnyte وAmazon S3 وSnowflake وMicrosoft SharePoint.">
+            Taqriry integrates with tools your team uses every day, including Salesforce, HubSpot, Egnyte, Amazon S3, Snowflake, and Microsoft SharePoint.
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-top">
+        <img src="{{ url_for('static', filename='images/robot pic.png') }}" alt="Taqriry.ai Logo" class="footer-logo">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4 data-en="Solutions" data-ar="الحلول">Solutions</h4>
+                <ul>
+                    <li><a href="#" data-en="For Business" data-ar="للأعمال">For Business</a></li>
+                    <li><a href="#" data-en="For Sales" data-ar="للمبيعات">For Sales</a></li>
+                    <li><a href="#" data-en="For Education" data-ar="للتعليم">For Education</a></li>
+                    <li><a href="#" data-en="For Media" data-ar="للإعلام">For Media</a></li>
+                    <li><a href="#" data-en="For Transcription" data-ar="للتفريغ">For Transcription</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-en="Apps & Integrations" data-ar="التطبيقات والتكامل">Apps & Integrations</h4>
+                <ul>
+                    <li><a href="#" data-en="All Apps" data-ar="جميع التطبيقات">All Apps</a></li>
+                    <li><a href="#" data-en="iOS" data-ar="iOS">iOS</a></li>
+                    <li><a href="#" data-en="Android" data-ar="أندرويد">Android</a></li>
+                    <li><a href="#" data-en="Chrome Extension" data-ar="إضافة Chrome">Chrome Extension</a></li>
+                    <li><a href="#" data-en="For Slack" data-ar="لـ Slack">For Slack</a></li>
+                    <li><a href="#" data-en="For Zoom" data-ar="لـ Zoom">For Zoom</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-en="Resources" data-ar="الموارد">Resources</h4>
+                <ul>
+                    <li><a href="#" data-en="Blog" data-ar="المدونة">Blog</a></li>
+                    <li><a href="#" data-en="Careers" data-ar="الوظائف">Careers</a></li>
+                    <li><a href="#" data-en="Press" data-ar="الصحافة">Press</a></li>
+                    <li><a href="#" data-en="Help & Support" data-ar="المساعدة والدعم">Help & Support</a></li>
+                    <li><a href="#" data-en="Media Kit" data-ar="مجموعة الوسائط">Media Kit</a></li>
+                    <li><a href="#" data-en="Affiliate" data-ar="الانتساب">Affiliate</a></li>
+                    <li><a href="#" data-en="Privacy & Security" data-ar="الخصوصية والأمان">Privacy & Security</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p data-en="&copy; 2024 Taqriry.ai" data-ar="&copy; 2024 تقريري.اي">&copy; 2024 Taqriry.ai</p>
+        <p data-en="| Pricing | Terms of Service | Privacy Policy | Cookie Settings" 
+           data-ar="| الأسعار | شروط الخدمة | سياسة الخصوصية | إعدادات الكوكيز">
+           | Pricing | Terms of Service | Privacy Policy | Cookie Settings
+        </p>
+        <div class="social-icons">
+            <a href="#"><img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+            <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
+            <a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+<script>
+    function setLanguage(language) {
+        // Update the content to the selected language
+        document.querySelectorAll('[data-en], [data-ar]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${language}`);
+        });
+
+        // Set a cookie to remember the language preference
+        document.cookie = `language=${language}; path=/; max-age=31536000`; // 1 year expiration
+    }
+
+    // Function to get the language preference from the cookie
+    function getLanguageFromCookie() {
+        const matches = document.cookie.match(/(?:^|; )language=([^;]*)/);
+        return matches ? matches[1] : null;
+    }
+
+    // Set the initial language based on the cookie
+    document.addEventListener('DOMContentLoaded', () => {
+        const preferredLanguage = getLanguageFromCookie() || 'en';
+        setLanguage(preferredLanguage);
+    });
+</script>
+

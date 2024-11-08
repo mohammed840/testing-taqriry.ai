@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.solutions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Solution Item Styling */
+.solution-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none; /* Removed any white line */
+}
+
+.solution-item:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon Styling */
+.solution-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Text Styling */
+.solution-text h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.solution-text p {
+    font-size: 0.95em;
+    color: #e0e0e0; /* Lighter gray for better contrast */
+    line-height: 1.4;
+}
+
+/* Remove underline from links in solution text */
+.solution-text a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the link color matches the surrounding text */
+    font-weight: bold; /* Keeps the bold style for headings */
+}
+
+/* Optional: Add underline and slight color change on hover */
+.solution-text a:hover {
+    text-decoration: underline; /* Adds underline back on hover */
+    color: #c0c0c0; /* Slight color change on hover */
+}
+
+/* Background Colors */
+.solution-business {
+    background-color: #2a2a2a; /* Slightly lighter black */
+}
+
+.solution-sales {
+    background-color: #009be6; /* Brightened blue */
+}
+
+.solution-education {
+    background-color: #b56eff; /* Slightly darker purple */
+}
+
+.solution-media {
+    background-color: #3b3b3b; /* Medium grey */
+}
+
+/* Help and Support Background */
+.solution-help {
+    background-color: #4CAF50; /* Green color */
+}

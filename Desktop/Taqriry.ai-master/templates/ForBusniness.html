@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-en="Taqriry.ai for Business" data-ar=" للأعمال">Taqriry.ai for Business</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Business.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Taqriry.png') }}" alt="Taqriry.ai Logo">
+                <span data-en="Taqriry.ai" data-ar="ر.اي">Taqriry.ai</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" data-en="Solutions" data-ar="الحلول">Solutions <span class="dropdown-arrow">▼</span></a>
+                <a href="{{ url_for('pricing') }}" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+                <a href="{{ url_for('apps') }}" data-en="Apps & Integrations" data-ar="التطبيقات والتكامل">Apps & Integrations</a>
+                <a href="#" data-en="Resources" data-ar="الموارد">Resources <span class="dropdown-arrow">▼</span></a>
+            </nav>
+            
+            <div class="language-toggle">
+                <button onclick="setLanguage('en')">English</button>
+                <button onclick="setLanguage('ar')">العربية</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Additional content here with data-en and data-ar attributes for each text element -->
+
+    <script>
+        function setLanguage(language) {
+            // Update all elements with data-en and data-ar attributes
+            document.querySelectorAll('[data-en], [data-ar]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${language}`);
+            });
+
+            // Update the page title
+            document.title = document.querySelector('title').getAttribute(`data-${language}`);
+
+            // Set a cookie for language preference
+            document.cookie = `language=${language}; path=/; max-age=31536000`; // 1 year expiration
+        }
+
+        function getLanguageFromCookie() {
+            const match = document.cookie.match(/(^| )language=([^;]+)/);
+            return match ? match[2] : 'en'; // Default to English if no cookie is set
+        }
+
+        // Set the initial language based on the cookie when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLanguage = getLanguageFromCookie();
+            setLanguage(preferredLanguage);
+        });
+    </script>
+</body>
+</html>
+
+
+    <main>
+        <!-- Centered Blue Box Section -->
+        <section class="centered-blue-box">
+            <div class="white-box">
+                <div class="text-content">
+                    <h1 data-en="Get the most from meetings with AI" data-ar="استفد من الاجتماعات بالذكاء الاصطناعي">Get the most from meetings with AI</h1>
+                    <p data-en="Get automated transcripts, meeting notes, and summaries with action items using Taqriry." data-ar="احصل على نصوص اجتماعات آلية وملاحظات وملخصات بنقاط العمل باستخدام Taqriry.">Get automated transcripts, meeting notes, and summaries with action items using Taqriry.</p>
+                    <div class="button-group">
+                        <a href="#" class="start-free-btn" data-en="Start 7-day free trial" data-ar="ابدأ فترة تجريبية مجانية لمدة 7 أيام">Start 7-day free trial</a>
+                        <a href="#" class="schedule-demo-btn" data-en="Schedule a Demo" data-ar="جدولة عرض توضيحي">Schedule a Demo</a>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/business-banner.png') }}" alt="Taqriry.ai for Business">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial-section">
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/fastcompany-logo.png') }}" alt="Fast Company">
+                <p data-en="You know that sinking feeling when you've zoned out in a meeting but you're pretty sure something important was just said? Taqriry.ai keeps that feeling at bay." data-ar="تعرف ذلك الشعور عندما تفقد تركيزك في اجتماع لكنك متأكد من أن شيئاً مهماً قد قيل؟ .اي يحميك من هذا الشعور.">You know that sinking feeling when you've zoned out in a meeting but you're pretty sure something important was just said? Taqriry.ai keeps that feeling at bay.</p>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/techcrunch-logo.png') }}" alt="TechCrunch">
+                <p data-en="The idea to automate meeting transcription makes sense for the remote work environment created by the pandemic..." data-ar="فكرة أتمتة نسخ الاجتماعات منطقية في بيئة العمل عن بُعد التي أوجدها الوباء...">The idea to automate meeting transcription makes sense for the remote work environment created by the pandemic...</p>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/engadget-logo.png') }}" alt="Engadget">
+                <p data-en="...a solution for that pile-up of virtual meetings in your calendar." data-ar="...حل للتراكم الكبير للاجتماعات الافتراضية في جدولك.">...a solution for that pile-up of virtual meetings in your calendar.</p>
+            </div>
+        </section>
+
+        <!-- Plan Section -->
+        <section class="centered-section">
+            <div class="text-and-image-container">
+                <div class="text-content">
+                    <h2 data-en="Plan" data-ar="خطة">Plan</h2>
+                    <p data-en="Connect your Google or Microsoft calendar and schedule your Taqriry to auto-join Zoom, Microsoft Teams, or Google Meet to take and share meeting notes. If you are running late or can’t make the meeting, no worries - Taqriry will still take notes." data-ar=" ربط تقويمك في Google أو Microsoft وجدولة Taqriry للانضمام تلقائيًا إلى اجتماعات Zoom أو Microsoft Teams أو Google Meet لتدوين ومشاركة ملاحظات الاجتماع. إذا كنت متأخرًا أو لا تستطيع حضور الاجتماع، لا تقلق - سيستمر Taqriry في تدوين الملاحظات.">Connect your Google or Microsoft calendar and schedule your Taqriry...</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/calendar-integration.png') }}" alt="Calendar Integration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Capture Section -->
+        <section class="centered-section">
+            <div class="text-and-image-container">
+                <div class="text-content">
+                    <h2 data-en="Capture" data-ar="التقاط">Capture</h2>
+                    <p data-en="Taqriry records audio and takes notes in real time, so that you can fully engage in the conversation.  You can highlight key takeaways to reference anytime. In virtual meetings, Taqriry will automatically capture meeting slides and add them to the notes, so you can recall and share details with complete context." data-ar="يقوم Taqriry بتسجيل الصوت وتدوين الملاحظات في الوقت الفعلي، مما يتيح لك التفاعل الكامل في المحادثة. يمكنك تمييز النقاط الرئيسية للرجوع إليها في أي وقت. في الاجتماعات الافتراضية، سيقوم Taqriry تلقائيًا بتسجيل شرائح الاجتماع وإضافتها إلى الملاحظات، مما يمكنك من تذكر ومشاركة التفاصيل بكامل سياقها.">Taqriry records audio and takes notes in real time, so that you can fully engage in the conversation.</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/capture-integration.png') }}" alt="Capture Integration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Summarize Section -->
+        <section class="centered-section">
+            <div class="text-and-image-container">
+                <div class="text-content">
+                    <h2 data-en="Summarize" data-ar="تلخيص">Summarize</h2>
+                    <p data-en="No more writing follow-up emails after the meeting. Taqriry generates an automated summary with action items, and hyperlinks to the meeting notes." data-ar="لن تحتاج لكتابة رسائل متابعة بعد الاجتماع. يقوم Taqriry بإنشاء ملخص تلقائي يتضمن بنود العمل وروابط للملاحظات الخاصة بالاجتماع.">No more writing follow-up emails after the meeting. Taqriry generates an automated summary...</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/calendar-integration.png') }}" alt="Calendar Integration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaborate Section -->
+        <section class="centered-section">
+            <div class="text-and-image-container">
+                <div class="text-content">
+                    <h2 data-en="Collaborate" data-ar="تعاون">Collaborate</h2>
+                    <p data-en="Teammates can chat together with Taqriry to get answers quickly, and with each other to move projects forward." data-ar="يمكن للزملاء الدردشة مع Taqriry للحصول على إجابات بسرعة، ومع بعضهم البعض لتقديم المشاريع.">Teammates can chat together with Taqriry to get answers quickly, and with each other to move projects forward.</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/calendar-integration.png') }}" alt="Calendar Integration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Generate Section -->
+        <section class="centered-section">
+            <div class="text-and-image-container">
+                <div class="text-content">
+                    <h2 data-en="Generate" data-ar="إنشاء">Generate</h2>
+                    <p data-en="Ask Taqriry to create follow-up emails, project status updates, blog posts, and much more!" data-ar="اطلب من Taqriry إنشاء رسائل متابعة، تحديثات حالة المشروع، منشورات المدونة، وأكثر من ذلك بكثير!">Ask Taqriry to create follow-up emails, project status updates, blog posts, and much more!</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/capture-integration.png') }}" alt="Capture Integration">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2 data-en="Ready to supercharge your business communication?" data-ar="جاهز لتعزيز اتصالات عملك؟">Ready to supercharge your business communication?</h2>
+                <a href="#" class="cta-button" data-en="Schedule a Demo" data-ar="جدولة عرض توضيحي">Schedule a Demo</a>
+                <div class="cta-icon">
+                    <img src="{{ url_for('static', filename='images/robot pic.png') }}" alt="Taqriry.ai Icon">
+                </div>
+            </div>
+        </section>
+        
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2 data-en="See how Taqriry.ai works for..." data-ar="شاهد كيف يعمل Taqriry.ai لـ...">See how Taqriry.ai works for...</h2>
+            <div class="how-it-works-cards">
+                <div class="how-it-works-card">
+                    <div class="icon-circle education-icon">
+                        <img src="{{ url_for('static', filename='images/education-icon.gif') }}" alt="Education Icon">
+                    </div>
+                    <h3 data-en="For your lectures" data-ar="للمحاضرات">For your lectures</h3>
+                    <p data-en="Taqriry provides faculty and students with real-time captions and notes for in-person and virtual lectures, classes, or meetings." data-ar="يوفر Taqriry لأعضاء هيئة التدريس والطلاب تعليقات توضيحية وملاحظات في الوقت الفعلي للمحاضرات والدروس والاجتماعات الحية أو الافتراضية.">Taqriry provides faculty and students with real-time captions and notes for in-person and virtual lectures, classes, or meetings.</p>
+                    <a href="#" class="education-button" data-en="Try Taqriry.ai for Education" data-ar="جرّب Taqriry.ai للتعليم">Try Taqriry.ai for Education</a>
+                </div>
+                
+                <div class="how-it-works-card">
+                    <div class="icon-circle enterprise-icon">
+                        <img src="{{ url_for('static', filename='images/enterprise-icon.gif') }}" alt="Enterprise Icon">
+                    </div>
+                    <h3 data-en="For Enterprise" data-ar="للشركات">For Enterprise</h3>
+                    <p data-en="Taqriry provides large organizations with advanced admin controls, additional support, and security at scale." data-ar="يوفر Taqriry للشركات الكبيرة أدوات تحكم إدارية متقدمة ودعم إضافي وأمان على نطاق واسع.">Taqriry provides large organizations with advanced admin controls, additional support, and security at scale.</p>
+                    <a href="#" class="enterprise-button" data-en="Schedule a Demo" data-ar="جدولة عرض توضيحي">Schedule a Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <img src="{{ url_for('static', filename='images/Taqriry.png') }}" alt="Taqriry.ai Logo" class="footer-logo">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4 data-en="Solutions" data-ar="الحلول">Solutions</h4>
+                    <ul>
+                        <li><a href="#" data-en="For Business" data-ar="للأعمال">For Business</a></li>
+                        <li><a href="#" data-en="For Sales" data-ar="للمبيعات">For Sales</a></li>
+                        <li><a href="#" data-en="For Education" data-ar="للتعليم">For Education</a></li>
+                        <li><a href="#" data-en="For Media" data-ar="للإعلام">For Media</a></li>
+                        <li><a href="#" data-en="For Transcription" data-ar="للنسخ">For Transcription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-en="Apps & Integrations" data-ar="التطبيقات والتكامل">Apps & Integrations</h4>
+                    <ul>
+                        <li><a href="#" data-en="All Apps" data-ar="جميع التطبيقات">All Apps</a></li>
+                        <li><a href="#" data-en="iOS" data-ar="آي أو إس">iOS</a></li>
+                        <li><a href="#" data-en="Android" data-ar="أندرويد">Android</a></li>
+                        <li><a href="#" data-en="Chrome Extension" data-ar="ملحق كروم">Chrome Extension</a></li>
+                        <li><a href="#" data-en="For Slack" data-ar="لـ سلاك">For Slack</a></li>
+                        <li><a href="#" data-en="For Zoom" data-ar="لـ زووم">For Zoom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-en="Resources" data-ar="الموارد">Resources</h4>
+                    <ul>
+                        <li><a href="#" data-en="Blog" data-ar="المدونة">Blog</a></li>
+                        <li><a href="#" data-en="Careers" data-ar="الوظائف">Careers</a></li>
+                        <li><a href="#" data-en="Press" data-ar="الصحافة">Press</a></li>
+                        <li><a href="#" data-en="Help & Support" data-ar="المساعدة والدعم">Help & Support</a></li>
+                        <li><a href="#" data-en="Media Kit" data-ar="مجموعة الوسائط">Media Kit</a></li>
+                        <li><a href="#" data-en="Affiliate" data-ar="الشراكة">Affiliate</a></li>
+                        <li><a href="#" data-en="Privacy & Security" data-ar="الخصوصية والأمان">Privacy & Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Taqriry.ai &nbsp;|&nbsp; <a href="#" data-en="Pricing" data-ar="الأسعار">Pricing</a> &nbsp;|&nbsp; <a href="#" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a> &nbsp;|&nbsp; <a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" data-en="Cookie Settings" data-ar="إعدادات الكوكيز">Cookie Settings</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

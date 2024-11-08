@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-en="Taqriry.ai for Sales" data-ar="أوتر.اي للمبيعات">Taqriry.ai for Sales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Sales.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span data-en="Taqriry.ai" data-ar="أ.اي">Taqriry.ai</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" data-en="Solutions" data-ar="الحلول">Solutions <span class="dropdown-arrow">▼</span></a>
+                <a href="{{ url_for('pricing') }}" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+                <a href="{{ url_for('apps') }}" data-en="Apps & Integrations" data-ar="التطبيقات والتكامل">Apps & Integrations</a>
+                <a href="#" data-en="Resources" data-ar="الموارد">Resources <span class="dropdown-arrow">▼</span></a>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <!-- Sales Banner Section -->
+        <section class="sales-banner">
+            <div class="banner-content">
+                <h1 data-en="You get paid to sell, " data-ar="تتقاضى أجرًا مقابل البيع، "><span class="highlight" data-en="not take notes." data-ar="وليس لتدوين الملاحظات.">not take notes.</span></h1>
+                <p data-en="Taqriry for Sales automatically extracts Sales Insights, writes follow-up emails, and pushes call notes to Salesforce and HubSpot." 
+                   data-ar="يستخرج Taqriry Insights، ويكتب رسائل المتابعة، ويرسل ملاحظات المكالمات إلى Salesforce وHubSpot تلقائيًا.">
+                   Taqriry for Sales automatically extracts Sales Insights, writes follow-up emails, and pushes call notes to Salesforce and HubSpot.
+                </p>
+                <a href="#" class="schedule-demo-btn" data-en="Schedule a Demo" data-ar="جدولة عرض توضيحي">Schedule a Demo</a>
+            </div>
+            <div class="sales-insight-box">
+                <img src="{{ url_for('static', filename='images/sales-conversation.png') }}" alt="Sales Call and Insights">
+            </div>
+        </section>
+
+        <section class="role-transformation-section">
+            <h3 data-en="Discover how " data-ar="اكتشف كيف "><span class="highlight" data-en="Taqriry for Sales" data-ar="Taqriry للمبيعات">Taqriry for Sales</span> 
+                <span data-en="can transform each one of these roles:" data-ar="يمكنه تحويل كل واحدة من هذه الأدوار:">can transform each one of these roles:</span></h3>
+            <div class="role-cards">
+                <div class="role-card sales-leaders">
+                    <span data-en="Sales Leaders" data-ar="قادة المبيعات">Sales Leaders</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="role-card account-executives">
+                    <span data-en="Account Executives" data-ar="مديرو الحسابات">Account Executives</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="role-card sales-operations">
+                    <span data-en="Sales Operations" data-ar="عمليات المبيعات">Sales Operations</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="role-card customer-success">
+                    <span data-en="Customer Success" data-ar="نجاح العملاء">Customer Success</span>
+                    <span class="arrow">→</span>
+                </div>
+            </div>
+            <h4 class="selected-role" data-en="Sales Leaders" data-ar="قادة المبيعات">Sales Leaders</h4>
+        </section>
+        
+        <section class="coach-team-section">
+            <h2><span class="highlight-coach" data-en="Coach" data-ar="توجيه">Coach</span> 
+                <span data-en="your team at scale" data-ar="فريقك على نطاق واسع">your team at scale</span></h2>
+            <p data-en="Taqriry transcribes calls in real time, giving you visibility into each rep’s verbatim discussion. Identify highlights and lowlights from calls to coach your entire team. You can even coach your reps while they are on a live call, without ever joining or interrupting the call."
+               data-ar="يقوم  بنسخ المكالمات في الوقت الفعلي، مما يمنحك رؤية للمناقشات الحرفية لكل مندوب. حدد النقاط البارزة والضعيفة من المكالمات لتوجيه فريقك بأكمله. يمكنك حتى توجيه ممثليك أثناء المكالمة المباشرة دون الحاجة للانضمام أو التدخل.">
+               Taqriry transcribes calls in real time, giving you visibility into each rep’s verbatim discussion.
+            </p>
+            <div class="image-content">
+                <img src="{{ url_for('static', filename='images/sales-call-example.png') }}" alt="Sales Call Example">
+            </div>
+        </section>
+
+<!-- Additional sections -->
+
+<section class="coach-team-section">
+    <h2><span class="highlight-coach" data-en="Unbiased visibility" data-ar="رؤية غير منحازة">Unbiased visibility</span> 
+        <span data-en="into your pipeline" data-ar="إلى مسار عملك">into your pipeline</span></h2>
+    <p data-en="After each call, Taqriry for Sales automatically syncs Sales Insights and a link to the call notes to Salesforce and HubSpot, giving you complete visibility vs. relying on manually entered CRM data."
+       data-ar="بعد كل مكالمة، يقوم Taqriry للمبيعات بمزامنة رؤى المبيعات ورابط ملاحظات المكالمة تلقائيًا إلى Salesforce وHubSpot، مما يمنحك رؤية كاملة بدلاً من الاعتماد على بيانات CRM المدخلة يدويًا.">
+       After each call, Taqriry for Sales automatically syncs Sales Insights and a link to the call notes to Salesforce and HubSpot, giving you complete visibility vs. relying on manually entered CRM data.
+    </p>
+    <div class="image-content">
+        <img src="{{ url_for('static', filename='images/sales-call-example.png') }}" alt="Sales Call Example">
+    </div>
+</section>
+
+<section class="coach-team-section">
+    <h2><span class="highlight-coach" data-en="Increase productivity" data-ar="زيادة الإنتاجية">Increase productivity</span> 
+        <span data-en="for your team" data-ar="لفريقك">for your team</span></h2>
+    <p data-en="Taqriry for Sales takes care of the administrative tasks, including writing notes, extracting Sales Insights, adding notes to Salesforce and HubSpot, and generating follow-up emails, so your reps can spend more time closing deals."
+       data-ar="يتولى Taqriry للمبيعات المهام الإدارية، بما في ذلك كتابة الملاحظات واستخراج رؤى المبيعات وإضافة الملاحظات إلى Salesforce وHubSpot وإنشاء رسائل المتابعة، مما يتيح لمندوبيك قضاء المزيد من الوقت في إتمام الصفقات.">
+       Taqriry for Sales takes care of the administrative tasks, including writing notes, extracting Sales Insights, adding notes to Salesforce and HubSpot, and generating follow-up emails, so your reps can spend more time closing deals.
+    </p>
+    <div class="image-content">
+        <img src="{{ url_for('static', filename='images/sales-call-example.png') }}" alt="Sales Call Example">
+    </div>
+</section>
+
+<section class="resources-section">
+    <h2 data-en="Resources for Sales" data-ar="الموارد للمبيعات">Resources for Sales</h2>
+    <div class="resource-cards">
+        <!-- Card 1 -->
+        <div class="resource-card">
+            <div class="card-image">
+                <img src="{{ url_for('static', filename='images/webinar-image.jpg') }}" alt="Webinar Image">
+            </div>
+            <div class="card-content">
+                <p class="resource-type" data-en="ON-DEMAND WEBINAR" data-ar="ندوة عبر الإنترنت عند الطلب">ON-DEMAND WEBINAR</p>
+                <h3 data-en="Improve sales productivity with AI-powered automated notes" data-ar="تحسين إنتاجية المبيعات بملاحظات تلقائية مدعومة بالذكاء الاصطناعي">
+                    Improve sales productivity with AI-powered automated notes
+                </h3>
+                <p data-en="Aiden Technologies saves time and improves rep efficiency by 33% with Taqriry.ai." data-ar="شركة Aiden Technologies توفر الوقت وتحسن كفاءة الممثلين بنسبة 33٪ مع Taqriry.ai.">
+                    Aiden Technologies saves time and improves rep efficiency by 33% with Taqriry.ai.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="resource-card">
+            <div class="card-image">
+                <img src="{{ url_for('static', filename='images/case-study-image.jpg') }}" alt="Case Study Image">
+            </div>
+            <div class="card-content">
+                <p class="resource-type" data-en="CASE STUDY" data-ar="دراسة حالة">CASE STUDY</p>
+                <h3 data-en="Why I chose Taqriry.ai over Gong" data-ar="لماذا اخترت Taqriry.ai بدلاً من Gong">
+                    Why I chose Taqriry.ai over Gong
+                </h3>
+                <p data-en="Canidium addressed virtual meeting challenges by adopting Taqriry resulting in streamlined collaboration, time savings, and improved efficiency." data-ar="واجهت Canidium تحديات الاجتماعات الافتراضية باعتماد Taqriry مما أدى إلى تبسيط التعاون وتوفير الوقت وزيادة الكفاءة.">
+                    Canidium addressed virtual meeting challenges by adopting Taqriry resulting in streamlined collaboration, time savings, and improved efficiency.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="resource-card">
+            <div class="card-image">
+                <img src="{{ url_for('static', filename='images/demo-image.png') }}" alt="Demo Image">
+            </div>
+            <div class="card-content">
+                <p class="resource-type" data-en="DEMO" data-ar="عرض توضيحي">DEMO</p>
+                <h3 data-en="Taqriry AI Chat for Sales" data-ar="دردشة Taqriry AI للمبيعات">Taqriry AI Chat for Sales</h3>
+                <p data-en="Watch this demo to leverage Taqriry AI's chat capabilities to summarize sales calls, collaborate with management, and automate follow-up tasks." data-ar="شاهد هذا العرض التوضيحي لاستغلال قدرات الدردشة في Taqriry AI لتلخيص المكالمات، التعاون مع الإدارة، وأتمتة المهام اللاحقة.">
+                    Watch this demo to leverage Taqriry AI's chat capabilities to summarize sales calls, collaborate with management, and automate follow-up tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
+
+    </main>
+
+    <script>
+        function setLanguage(language) {
+            // Update the text content based on the selected language
+            document.querySelectorAll('[data-en], [data-ar]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${language}`);
+            });
+
+            // Update the page title
+            document.title = document.querySelector('title').getAttribute(`data-${language}`);
+
+            // Set a cookie to remember the language preference
+            document.cookie = `language=${language}; path=/; max-age=31536000`; // 1 year expiration
+        }
+
+        function getLanguageFromCookie() {
+            const match = document.cookie.match(/(?:^|; )language=([^;]*)/);
+            return match ? match[1] : 'en'; // Default to English if no cookie is set
+        }
+
+        // Set the initial language based on the cookie when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLanguage = getLanguageFromCookie();
+            setLanguage(preferredLanguage);
+        });
+    </script>
+</body>
+</html>
+
+    
+    </main>
+
+    <footer>
+        <footer class="footer">
+            <div class="footer-top">
+                <img src="{{ url_for('static', filename='images/Taqriry.png') }}" alt="Taqriry Logo" class="footer-logo">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#">For Business</a></li>
+                            <li><a href="#">For Sales</a></li>
+                            <li><a href="#">For Education</a></li>
+                            <li><a href="#">For Media</a></li>
+                            <li><a href="#">For Transcription</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Apps & Integrations</h4>
+                        <ul>
+                            <li><a href="#">All Apps</a></li>
+                            <li><a href="#">iOS</a></li>
+                            <li><a href="#">Android</a></li>
+                            <li><a href="#">Chrome Extension</a></li>
+                            <li><a href="#">For Slack</a></li>
+                            <li><a href="#">For Zoom</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                            <li><a href="#">Privacy & Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Taqriry.ai &nbsp;|&nbsp; <a href="#">Pricing</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Cookie Settings</a></p>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter"></a>
+                </div>
+            </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

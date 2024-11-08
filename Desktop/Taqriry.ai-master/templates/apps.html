@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="{{ 'ar' if language == 'ar' else 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'التطبيقات والتكامل' if language == 'ar' else 'Apps & Integrations' }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/appsstyles.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">
+                    <span>{{ 'تقريري' if language == 'ar' else 'Taqriry.ai' }}</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <a href="#">{{ 'الحلول' if language == 'ar' else 'Solutions' }} <span class="dropdown-arrow">▼</span></a>
+                <a href="#">{{ 'الأسعار' if language == 'ar' else 'Pricing' }}</a>
+                <a href="{{ url_for('apps') }}">{{ 'التطبيقات والتكامل' if language == 'ar' else 'Apps & Integrations' }}</a>
+                <a href="#">{{ 'الموارد' if language == 'ar' else 'Resources' }} <span class="dropdown-arrow">▼</span></a>
+            </nav>
+       
+        </div>
+    </header>
+
+    <main class="apps-integrations-page">
+        <h1>{{ 'التطبيقات والتكامل' if language == 'ar' else 'Apps & Integrations' }}</h1>
+        <p>{{ 'اتصل واستخدم Taqriry مع الأدوات التي يستخدمها فريقك كل يوم.' if language == 'ar' else 'Connect and use Taqriry with the tools your team uses every day.' }}</p>
+
+        <div class="apps-container">
+            <!-- Sidebar for Categories -->
+            <aside class="categories-sidebar">
+                <h4>{{ 'الفئات' if language == 'ar' else 'CATEGORIES' }}</h4>
+                <ul>
+                    <li><a href="#" class="active">{{ 'جميع التطبيقات والتكاملات' if language == 'ar' else 'All Apps & Integrations' }}</a></li>
+                    <li><a href="#">{{ 'التعاون' if language == 'ar' else 'Collaboration' }}</a></li>
+                    <li><a href="#">{{ 'إدارة علاقات العملاء' if language == 'ar' else 'CRM' }}</a></li>
+                    <li><a href="#">{{ 'التقويم' if language == 'ar' else 'Calendar' }}</a></li>
+                    <li><a href="#">{{ 'إضافات المتصفح' if language == 'ar' else 'Browser Extensions' }}</a></li>
+                    <li><a href="#">{{ 'التخزين' if language == 'ar' else 'Storage' }}</a></li>
+                    <li><a href="#">{{ 'تحليلات' if language == 'ar' else 'Analytics' }}</a></li>
+                    <li><a href="#">{{ 'المتصلات' if language == 'ar' else 'Dialers' }}</a></li>
+                    <li><a href="#">{{ 'مؤتمرات الفيديو' if language == 'ar' else 'Video Conferencing' }}</a></li>
+                </ul>
+            </aside>
+
+          
+
+                <section class="apps-list">
+                    <!-- Amazon S3 App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/amazon-s3.png') }}" alt="Amazon S3" class="app-icon">
+                        <div class="app-details">
+                            <h3>Amazon S3</h3>
+                            <p>{{ 'يقوم Taqriry بتصدير النصوص والملخصات وبيانات الاجتماع إلى Amazon S3.' if language == 'ar' else 'Taqriry exports transcripts, summaries, and meeting metadata to Amazon S3.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Dropbox App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/dropbox.png') }}" alt="Dropbox" class="app-icon">
+                        <div class="app-details">
+                            <h3>Dropbox</h3>
+                            <p>{{ 'عند إضافة ملف فيديو أو صوت إلى مجلد Taqriry في Dropbox، سيتم تفريغه تلقائيًا ومزامنته مع Taqriry.' if language == 'ar' else 'When you add a video or audio file into the Taqriry app folder in Dropbox, it will automatically be transcribed and synced with Taqriry.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اعرف المزيد' if language == 'ar' else 'Learn more' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Egnyte App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/egnyte.png') }}" alt="Egnyte" class="app-icon">
+                        <div class="app-details">
+                            <h3>Egnyte</h3>
+                            <p>{{ 'يقوم Taqriry بتصدير النصوص والملخصات وبيانات الاجتماع إلى Egnyte.' if language == 'ar' else 'Taqriry exports transcripts, summaries, and meeting metadata to Egnyte.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Google Calendar App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/google-calendar.png') }}" alt="Google Calendar" class="app-icon">
+                        <div class="app-details">
+                            <h3>Google Calendar</h3>
+                            <p>{{ 'ينضم Taqriry تلقائيًا إلى الاجتماعات من تقويم Google لتسجيل الصوت وتفريغه في الوقت الفعلي.' if language == 'ar' else 'Taqriry auto-joins meetings from Google Calendar to record audio and transcribe in real-time.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'ابدأ مجاناً' if language == 'ar' else 'Start for Free' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Google Docs App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/google-docs.png') }}" alt="Google Docs" class="app-icon">
+                        <div class="app-details">
+                            <h3>Google Docs</h3>
+                            <p>{{ 'يدفع Taqriry النصوص وملخصات الاجتماعات تلقائيًا إلى Google Docs.' if language == 'ar' else 'Taqriry automatically pushes transcripts and meeting summaries to Google Docs.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Google Meet App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/google-meet.png') }}" alt="Google Meet" class="app-icon">
+                        <div class="app-details">
+                            <h3>Google Meet</h3>
+                            <p>{{ 'ينضم Taqriry تلقائيًا إلى اجتماعات Google Meet لتسجيل الصوت، وكتابة الملاحظات، والتقاط الشرائح، وإنشاء ملخص مع بنود العمل.' if language == 'ar' else 'Taqriry auto-joins Google Meet meetings to record audio, write notes, capture slides, and generate a summary with action items.' }}</p>
+                            <a href="#" class="contact-sales start-free">{{ 'ابدأ مجاناً' if language == 'ar' else 'Start for Free' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- HubSpot App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/hubspot.png') }}" alt="HubSpot" class="app-icon">
+                        <div class="app-details">
+                            <h3>HubSpot</h3>
+                            <p>{{ 'يقوم Taqriry للمبيعات بتصدير رؤى المبيعات وملاحظات المكالمات إلى HubSpot تلقائيًا.' if language == 'ar' else 'Taqriry for Sales automatically pushes Sales Insights and call notes to HubSpot.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Microsoft Outlook App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/microsoft-outlook.png') }}" alt="Microsoft Outlook" class="app-icon">
+                        <div class="app-details">
+                            <h3>Microsoft Outlook</h3>
+                            <p>{{ 'ينضم Taqriry تلقائيًا إلى الاجتماعات من Microsoft Outlook لتسجيل الصوت وتفريغه في الوقت الفعلي.' if language == 'ar' else 'Taqriry auto-joins meetings from Microsoft Outlook to record audio and transcribe in real time.' }}</p>
+                            <a href="#" class="contact-sales start-free">{{ 'ابدأ مجاناً' if language == 'ar' else 'Start for Free' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Microsoft SharePoint App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/microsoft-sharepoint.png') }}" alt="Microsoft SharePoint" class="app-icon">
+                        <div class="app-details">
+                            <h3>Microsoft SharePoint</h3>
+                            <p>{{ 'يقوم Taqriry بتصدير النصوص والملخصات وبيانات الاجتماع إلى Microsoft SharePoint.' if language == 'ar' else 'Taqriry exports transcripts, summaries, and meeting metadata to Microsoft SharePoint.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Microsoft Teams App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/microsoft-teams.png') }}" alt="Microsoft Teams" class="app-icon">
+                        <div class="app-details">
+                            <h3>Microsoft Teams</h3>
+                            <p>{{ 'ينضم Taqriry تلقائيًا إلى اجتماعات Microsoft Teams لتسجيل الصوت، وكتابة الملاحظات، والتقاط الشرائح، وإنشاء ملخص مع بنود العمل.' if language == 'ar' else 'Taqriry auto-joins Microsoft Teams meetings to record audio, write notes, capture slides, and generate a summary with action items.' }}</p>
+                            <a href="#" class="contact-sales start-free">{{ 'ابدأ مجاناً' if language == 'ar' else 'Start for Free' }}</a>
+                        </div>
+                    </div>
+                
+                    <!-- Slack App Card -->
+                    <div class="app-card">
+                        <img src="{{ url_for('static', filename='images/slack.png') }}" alt="Slack" class="app-icon">
+                        <div class="app-details">
+                            <h3>Slack</h3>
+                            <p>{{ 'يقوم Taqriry بمشاركة التحديثات في الوقت الفعلي مع الزملاء في Slack، مما يضمن بقاء الجميع على اطلاع.' if language == 'ar' else 'Taqriry automatically shares real-time updates with teammates in Slack, ensuring everyone is in the loop.' }}</p>
+                            <a href="#" class="contact-sales">{{ 'اعرف المزيد' if language == 'ar' else 'Learn more' }}</a>
+                        </div>
+                    </div>
+                
+<!-- Outreach App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/outreach.png') }}" alt="Outreach" class="app-icon">
+    <div class="app-details">
+        <h3>Outreach</h3>
+        <p>{{ 'يقوم Taqriry بتفريغ المكالمات تلقائيًا من Outreach.' if language == 'ar' else 'Taqriry automatically transcribes calls from Outreach.' }}</p>
+        <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+    </div>
+</div>
+
+<!-- Salesforce App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/salesforce.png') }}" alt="Salesforce" class="app-icon">
+    <div class="app-details">
+        <h3>Salesforce</h3>
+        <p>{{ 'يقوم Taqriry للمبيعات بتصدير رؤى المبيعات وملاحظات المكالمات إلى Salesforce تلقائيًا.' if language == 'ar' else 'Taqriry for Sales automatically pushes Sales Insights and call notes to Salesforce.' }}</p>
+        <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+    </div>
+</div>
+
+<!-- Slack App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/slack.png') }}" alt="Slack" class="app-icon">
+    <div class="app-details">
+        <h3>Slack</h3>
+        <p>{{ 'يقوم Taqriry بمشاركة التحديثات في الوقت الفعلي مع الزملاء في Slack، مما يضمن بقاء الجميع على اطلاع.' if language == 'ar' else 'Taqriry automatically shares real-time updates with teammates in Slack, ensuring everyone is in the loop.' }}</p>
+        <a href="#" class="contact-sales">{{ 'اعرف المزيد' if language == 'ar' else 'Learn more' }}</a>
+    </div>
+</div>
+
+<!-- Snowflake App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/snowflake.png') }}" alt="Snowflake" class="app-icon">
+    <div class="app-details">
+        <h3>Snowflake</h3>
+        <p>{{ 'يقوم Taqriry بتصدير النصوص والملخصات وبيانات الاجتماع إلى Snowflake.' if language == 'ar' else 'Taqriry exports transcripts, summaries, and meeting metadata to Snowflake.' }}</p>
+        <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+    </div>
+</div>
+
+<!-- Zoom App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/zoom.png') }}" alt="Zoom" class="app-icon">
+    <div class="app-details">
+        <h3>Zoom</h3>
+        <p>{{ 'ينضم Taqriry تلقائيًا إلى اجتماعات Zoom لتسجيل الصوت، وكتابة الملاحظات، والتقاط الشرائح، وإنشاء ملخص مع بنود العمل.' if language == 'ar' else 'Taqriry auto-joins Zoom meetings to record audio, write notes, capture slides, and generate a summary with action items.' }}</p>
+        <a href="#" class="contact-sales start-free">{{ 'ابدأ مجاناً' if language == 'ar' else 'Start for Free' }}</a>
+    </div>
+</div>
+
+<!-- Zoom Phone App Card -->
+<div class="app-card">
+    <img src="{{ url_for('static', filename='images/zoom.png') }}" alt="Zoom Phone" class="app-icon">
+    <div class="app-details">
+        <h3>Zoom Phone</h3>
+        <p>{{ 'يقوم Taqriry بتفريغ المكالمات تلقائيًا من Zoom Phone.' if language == 'ar' else 'Taqriry automatically transcribes calls from Zoom Phone.' }}</p>
+        <a href="#" class="contact-sales">{{ 'اتصل بالمبيعات' if language == 'ar' else 'Contact Sales' }}</a>
+    </div>
+</div>
+                
+
+            </section>
+        </div>
+    </main>
+</body>
+</html>

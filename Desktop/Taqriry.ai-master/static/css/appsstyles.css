@@ -1,0 +1,329 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    direction: ltr; /* Default direction */
+}
+
+body:dir(rtl) {
+    direction: rtl; /* RTL for Arabic */
+}
+
+/* Header Styles */
+header {
+    background-color: #e9ecf3;
+    padding: 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1em;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #007bff;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-buttons .schedule-demo,
+.auth-buttons .login {
+    color: #666;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auth-buttons .start-free {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .start-free:hover {
+    background-color: #0056b3;
+}
+
+/* Apps & Integrations Page */
+.apps-integrations-page {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+}
+
+.apps-integrations-page h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.apps-integrations-page p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Container for Sidebar and App List */
+.apps-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Sidebar for Categories */
+.categories-sidebar {
+    width: 220px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
+    position: sticky;
+    top: 20px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.categories-sidebar h4 {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; /* Divider line for better separation */
+    padding-bottom: 10px;
+}
+
+.categories-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories-sidebar li {
+    margin-bottom: 15px;
+}
+
+.categories-sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: color 0.3s, font-weight 0.3s;
+    display: inline-block;
+}
+
+.categories-sidebar a.active,
+.categories-sidebar a:hover {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.categories-sidebar a.active::before,
+.categories-sidebar a:hover::before {
+    content: "› ";
+    color: #007bff; /* Arrow indicator */
+}
+
+
+/* App List Section */
+.apps-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards within the container */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* App Card */
+/* App Card */
+.app-card {
+    width: 280px;
+    min-height: 320px; /* Minimum height for consistent layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center all content in the card */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    gap: 10px; /* Adjust spacing between elements inside the card */
+}
+
+.app-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px; /* Reduced margin for a tighter layout */
+    object-fit: contain; /* Ensures icons scale correctly */
+    transition: transform 0.3s;
+}
+
+.app-details h3 {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0 5px 0; /* Reduced top/bottom margin */
+}
+
+.app-details p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin: 5px 0; /* Reduced top/bottom margin */
+}
+
+/* Button */
+.contact-sales, .start-free {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-top: 5px; /* Adjust as needed for spacing */
+}
+
+.contact-sales:hover, .start-free:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-top:dir(rtl) {
+    flex-direction: row-reverse;
+}
+
+.footer-logo {
+    width: 100px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column h4 {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #b0c4de;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    font-size: 0.85em;
+    color: #b0c4de;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 20px;
+    opacity: 0.7;
+}
+
+.social-icons a img:hover {
+    opacity: 1;
+}

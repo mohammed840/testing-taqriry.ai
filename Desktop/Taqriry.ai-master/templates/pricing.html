@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plans & Pricing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pricingstyles.css') }}">
+
+</body>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="{{ url_for('home') }}"><span>Taqriry.ai</span></a>
+            </div>
+            <nav class="main-nav">
+                <a href="#">Solutions</a>
+                <a href="#">Pricing</a>
+                <a href="{{ url_for('apps') }}">Apps & Integrations</a>
+                <a href="#">Resources</a>
+            </nav>
+            
+        </div>
+    </header>
+
+    <!-- Main Pricing Content -->
+    <main class="pricing-page">
+        <h1>Plans & Pricing</h1>
+        <div class="toggle-container">
+            <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="pricingToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Yearly <span class="save">Save up to 51%</span></span>
+        </div>
+
+        <div class="pricing-cards">
+            
+
+            <!-- Pro Plan -->
+            <div class="pricing-card Basic">
+                <h2>Basic</h2>
+                <p>Better collaboration for small teams</p>
+                <h3>$$$$$ <span>USD per user</span></h3>
+                <p>Billed Monthly</p>
+                <button>Coming soon</button>
+                <ul>
+                    <li>Everything in Basic +</li>
+                    <li>Custom vocabulary, speakers, and action items for teammates</li>
+                    <li>Advanced search, export, and playback</li>
+                    <li>1200 monthly transcription minutes, 90 minutes per conversation</li>
+                    <li>Import and transcribe 10+ audio or video files per month</li>
+                </ul>
+            </div>
+
+            <!-- Business Plan -->
+            <div class="pricing-card business best-value">
+                <div class="best-value-badge">Best Value</div>
+                <h2>Business</h2>
+                <p>Greater productivity for teams</p>
+                <h3>$$$$$ <span>USD per user</span></h3>
+                <p>Billed Monthly</p>
+                <button>Coming soon</button>
+                <ul>
+                    <li>Everything in Pro +</li>
+                    <li>Admin features, analytics, and prioritized support</li>
+                    <li>Joins up to 3 virtual meetings to share notes</li>
+                    <li>6000 monthly transcription minutes, 4 hours per conversation</li>
+                    <li>Import and transcribe unlimited* audio or video files</li>
+                </ul>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card enterprise">
+                <h2>Enterprise</h2>
+                <p>Advanced security, control, and support for organizations</p>
+                <h3>Contact Us</h3>
+                <button>Schedule a Demo</button>
+                <ul>
+                    <li>Everything in Business +</li>
+                    <li>Single Sign-On (SSO) and deployment options</li>
+                    <li>Customizable security and compliance controls</li>
+                    <li>Dedicated support and training</li>
+                    <li>Integration with multiple tools and platforms</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+     <!-- Feature Comparison Table -->
+     <section class="feature-comparison">
+        <h2>Feature Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Free trial</th>
+                    <th>Pro</th>
+                    <th>Business</th>
+                    <th>Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Max Workspace Members</td>
+                    <td>5</td>
+                    <td>5 billed per user</td>
+                    <td>25 billed per user</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>AI transcription in English and Arabic</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Speaker identification (by name)</td>
+                    <td>✔️</td>
+                    <td>Shared speakers</td>
+                    <td>Shared speakers</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Keywords and speaker talk time</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Automated Summary with Action Items and Outline</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Live transcription of recording via the Taqriry app</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Live notes and captioning for Google Meet</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Automatic sync of audio/video files from Dropbox</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Automatic sync of cloud recordings from Zoom</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Taqriry joins Zoom, Microsoft Teams, & Google Meet to automatically take and share notes, even if you can’t join the meeting</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Taqriry: Number of Concurrent Meetings</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Integrated live notes and captioning for Zoom</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Live transcription via RTMP (additional fees apply)</td>
+                    <td>✔️</td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Max monthly transcription (no rollover)</td>
+                    <td>300 minutes per user</td>
+                    <td>1200 minutes per user</td>
+                    <td>6000 minutes per user</td>
+                    <td>6000 minutes per user</td>
+                </tr>
+                <tr>
+                    <td>Max transcription per conversation</td>
+                    <td>30 minutes</td>
+                    <td>90 minutes</td>
+                    <td>4 hours</td>
+                    <td>4 hours</td>
+                </tr>
+                <tr>
+                    <td>Record and transcribe your meetings in real time (number of recordings*)</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Import and transcribe pre-recorded audio/video files (number of imports*)</td>
+                    <td>3 lifetime per user</td>
+                    <td>10 monthly per user</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Conversation History</td>
+                    <td>25 most recent</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Custom vocabulary (for names, jargon, acronyms)</td>
+                    <td>5 terms</td>
+                    <td>Team: 100 names + 100 other terms<br>Per User: 100 names + 100 other terms</td>
+                    <td>Team: 800 names + 800 other terms<br>Per User: 200 names + 200 other terms</td>
+                    <td>Team: 800 names + 800 other terms<br>Per User: 200 names + 200 other terms</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="section-header">Taqriry for Sales</td>
+                </tr>
+                <tr>
+                    <td>Extracts Sales Insights</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Sync notes to Salesforce or Hubspot</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Centralizes customer calls</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="section-header">Recording and Playback</td>
+                </tr>
+                <tr>
+                    <td>Web and mobile recording</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Audio input from built-in mic, Bluetooth, and AirPods</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Android/iOS widget and Siri Shortcuts support</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Synchronized word highlighting during playback</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Search by keywords</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Advanced search by speakers, date range, and more</td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Editable time codes</td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Playback Speeds</td>
+                    <td>1x</td>
+                    <td>0.5x, 0.75x, 1x, 1.25x, 1.5x, 1.75x, 2x, 3x, skip silence</td>
+                    <td>0.5x, 0.75x, 1x, 1.25x, 1.5x, 1.75x, 2x, 3x, skip silence</td>
+                    <td>0.5x, 0.75x, 1x, 1.25x, 1.5x, 1.75x, 2x, 3x, skip silence</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="section-header">Collaboration</td>
+                </tr>
+                <tr>
+                    <td>Editable text and speaker tags</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Real-time annotation (highlights, text notes, comments, and images)</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Takeaways panel: Capture annotations and assign action items</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Automated Slide Capture for virtual meetings</td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Folders</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Sharing via private channels and public links</td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Sharing to all team members via General channel</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Exportable audio, text, and captions</td>
+                    <td>mp3, txt</td>
+                    <td>mp3, txt, pdf, docx, srt</td>
+                    <td>mp3, txt, pdf, docx, srt; bulk export</td>
+                    <td>mp3, txt, pdf, docx, srt; bulk export</td>
+                </tr>
+                <tr>
+                    <td><span class="new-feature">NEW</span>  Taqriry AI Chat - monthly queries</td>
+                    <td>20 per user<br>(3 per conversation)</td>
+                    <td>50 per user</td>
+                    <td>200 per user</td>
+                    <td>500 per user</td>
+                </tr>
+                <tbody>
+                    <!-- Existing rows -->
+                
+                    <!-- Administration and Security Section -->
+                    <tr>
+                        <td colspan="5" class="section-header">Administration and Security</td>
+                    </tr>
+                    <tr>
+                        <td>TLS encryption</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>AES-256 encryption for real-time content</td>
+                        <td></td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Centralized billing</td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>User management</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Usage analytics report</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Activity Logs</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Domain capture</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Remove audio from conversations</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Centralized conversation management</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Recording disclaimer email</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Bulk user management</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Control recording & sharing permissions</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Rename Taqriry in virtual meetings</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>2-factor authentication</td>
+                        <td></td>
+                        <td>Authenticator App</td>
+                        <td>Authenticator App</td>
+                        <td>Authenticator App, SMS (US/Canada only)</td>
+                    </tr>
+                    <tr>
+                        <td>Single Sign-On (SSO)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>minimum 100-user license required</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="section-header">Product Support</td>
+                    </tr>
+                    <tr>
+                        <td>Email Support</td>
+                        <td>standard support</td>
+                        <td>standard support</td>
+                        <td>prioritized support</td>
+                        <td>prioritized support</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="note">
+                            *Plan’s transcription limits (per month and per conversation) apply
+                        </td>
+                    </tr>
+                </tbody>
+                
+                <!-- Additional rows for other features -->
+            </tbody>
+        </table>
+    </section>
+</main>
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <button class="faq-question">My colleagues and I have Taqriry accounts. Can we switch to Business?</button>
+        <div class="faq-answer">
+            <p>Yes, you can easily switch to a Business plan by contacting our support team.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">What forms of payment can I use?</button>
+        <div class="faq-item">
+            <button class="faq-question">Can I pay with PayPal?</button>
+            <div class="faq-answer">
+                <p>Yes, PayPal is accepted for all plans.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Is there a discount for students?</button>
+            <div class="faq-answer">
+                <p>Currently, we do not offer a student discount, but we have various affordable plans to suit different needs.</p>
+            </div>
+        </div>
+    </section>
+    
+
+<footer>
+    <!-- Include your footer here -->
+
+    <footer class="footer">
+        <div class="footer-top">
+            <img src="{{ url_for('static', filename='images/Taqriry.png') }}" alt="Taqriry.ai Logo" class="footer-logo">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">For Business</a></li>
+                        <li><a href="#">For Sales</a></li>
+                        <li><a href="#">For Education</a></li>
+                        <li><a href="#">For Media</a></li>
+                        <li><a href="#">For Transcription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Apps & Integrations</h4>
+                    <ul>
+                        <li><a href="#">All Apps</a></li>
+                        <li><a href="#">iOS</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">Chrome Extension</a></li>
+                        <li><a href="#">For Slack</a></li>
+                        <li><a href="#">For Zoom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                        <li><a href="#">Privacy & Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Taqriry.ai &nbsp;|&nbsp; <a href="#">Pricing</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Cookie Settings</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter"></a>
+            </div>
+        </div>
+
+</footer>
+
+
+</body>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

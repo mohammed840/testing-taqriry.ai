@@ -1,0 +1,433 @@
+/* General Styles for Body and Header */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.logo span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.main-nav a, .auth-buttons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.auth-buttons .start-free {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.auth-buttons a:hover {
+    text-decoration: underline;
+}
+
+/* Pricing Page Styles */
+.pricing-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.toggle-container .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-container .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.toggle-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; width: 26px;
+    left: 2px; bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-container input:checked + .slider {
+    background-color: #007bff;
+}
+
+.toggle-container input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.save {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+/* Updated Pricing Card Layout */
+.pricing-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Set a fixed width for each card to fit four in a row */
+.pricing-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: calc(25% - 20px); /* Make each card 25% of the row with 20px spacing */
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.pricing-card h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.pricing-card h3 {
+    font-size: 1.25em;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    color: #666;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-card button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pricing-card.best-value {
+    border: 2px solid #007bff;
+    position: relative;
+}
+
+.best-value-badge {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .pricing-card {
+        width: calc(50% - 20px); /* Adjust to fit two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* Pricing Page General Styles */
+.pricing-page h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Pricing Cards Section */
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    width: calc(25% - 20px);
+}
+
+/* Feature Comparison Table */
+.feature-comparison {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.feature-comparison h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.feature-comparison th, .feature-comparison td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.feature-comparison th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.feature-comparison td {
+    color: #666;
+}
+
+.feature-comparison td:first-child {
+    text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .pricing-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-card {
+        width: 100%;
+    }
+}
+
+/* Section Header Styling */
+.section-header {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    padding: 15px 0;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+/* Section Header Styling */
+.section-header {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    padding: 15px 0;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.faq-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2d3748;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* FAQ Question Button */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #2d3748;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-align: left;
+}
+
+.faq-question:hover {
+    color: #007bff;
+}
+
+/* FAQ Question Icon */
+.faq-question::after {
+    font-size: 1.2em;
+    color: #2d3748;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg); /* Rotates arrow when active */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    display: none;
+    padding: 15px 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+
+.footer {
+    background-color: #0D1B2A;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1C3A57;
+}
+
+.footer-logo {
+    max-width: 100px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #D1D9E6;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+}
+
+.footer-bottom p, .footer-bottom a {
+    color: #D1D9E6;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+}
